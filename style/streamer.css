@@ -52,3 +52,15 @@ p {margin: 0px;}
 #totalTime {left: 620px;}
 #volumeDown {left: 565px;}
 #volumeUp {left: 595px;}
+
+/* Fra Eivind Birkedal */
+
+#playerPlayPause{
+	bottom: 15px;
+	/* sentrerer spillknappen med tidsmarkeringen/tidslinjen */
+}
+
+#nowPlayingP{
+	top: 45px;
+	/* Flytter spilleinfo over tidslinjen og gjør det mulig å hoppe i tidslinjen */
+}

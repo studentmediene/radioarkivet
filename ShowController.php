@@ -80,7 +80,7 @@ if (is_numeric($showID) && showExcists($showID)) {
 	echo "<table id=\"broadcastsTable\" class=\"content\">";
 	for ($i = 0; $i < count($broadcastsForShow); $i++) {
 		//class in just used for the javascript in StreamOnDemand.php to get filename
-		echo "<tr id=\"".$broadcastsForShow[$i]->getID()."\" class=\"".$broadcastsForShow[$i]->getFilename()."\"  onclick=\"playSound(".$broadcastsForShow[$i]->getID(). ",'" .$broadcastsForShow[$i]->getFilename()."', '".$broadcastsForShow[$i]->getName()."')\">
+		echo "<tr id=\"".$broadcastsForShow[$i]->getID()."\" class=\"".$broadcastsForShow[$i]->getFilename()."\" number=\"$i\" onclick=\"playSound(".$broadcastsForShow[$i]->getID(). ",'" .$broadcastsForShow[$i]->getFilename()."', '".$broadcastsForShow[$i]->getName()."')\">
 					<td class=\"broadcastsTableTd1\"><img id=\"img".$broadcastsForShow[$i]->getID()."\" class=\"playImgTd\" src=\"img/play.png\"/></td>
 					<td class=\"broadcastsTableTd2\">
 						<p id=\"broadcastTitle".$broadcastsForShow[$i]->getID()."\" class=\"broadcastNameP\">".$broadcastsForShow[$i]->getName()."</p>

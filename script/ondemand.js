@@ -2,8 +2,8 @@
  * @AUTHOR Christian Wallervand														*
  * This script contains custom JavaScript methods for the StreamOnDemand application*
  ************************************************************************************/
-var SWF_PATH 			= 'FLASH_FILES_URL'; // Example: ondemand.radiorevolt.no/swf/
-var SOUND_PATH 			= 'SOUND_FILES_URL'; // Example: pappagorg.radiorevolt.no/ondemand/
+var SWF_PATH            = 'FLASH_FILES_URL'; // Example: ondemand.radiorevolt.no/swf/
+var SOUND_PATH          = 'SOUND_FILES_URL'; // Example: pappagorg.radiorevolt.no/ondemand/
 var PLAY_IMG			= 'img/play.png';
 var PAUSE_IMG			= 'img/pause.png';
 var TR_COLOUR_1 		= '#FFFFFF';
@@ -85,6 +85,27 @@ function playPause(id) {
 	}
 }
 
+function playNextSound(id) {
+	var rows = document.getElementsByTagName("tr");
+	var nextrow_id;
+	var currow_index;
+
+	for (var j = 0; j < rows.length; j++) {
+		if (String(rows[j].id) == String(id)) {
+			currow_index = j;
+			break;
+		}
+	}
+
+	if (currow_index == rows.length-1) {
+		nextrow_id = id;
+	} else {
+		nextrow_id = rows[currow_index+1].id;
+	}
+
+	window.location.assign('/#/?showID='+selectedShow+'&broadcastID='+nextrow_id);
+}
+
 /**************************
  * Play the selected sound*
  **************************/
@@ -150,11 +171,36 @@ function playSound(id, file, broadcastTitle) {
  * Creates and returns a sound based on id and filepath*
  *******************************************************/
 function createSound(id, path) {
+
+	function playNextSound() {
+        var rows = document.getElementsByTagName("tr");
+        var nextrow_id;
+        var currow_index;
+
+        for (var j = 0; j < rows.length; j++) {
+                if (String(rows[j].id) == String(id)) {
+                        currow_index = j;
+                        break;
+                }
+        }
+
+        if (currow_index == rows.length-1) {
+                nextrow_id = id;
+        } else {
+                nextrow_id = rows[currow_index+1].id;
+        }
+
+        window.location.assign('/#/?showID='+selectedShow+'&broadcastID='+nextrow_id);
+	window.location.reload();
+	}
+
 	mySound = soundManager.createSound({
 		//SM2 has loaded - now you can create and play sounds
 		id: id,
 		url: path,
 		volume: 100,
+//		multiShotEvents: true,
+		onfinish: playNextSound,
 		whileloading: function() {
 			//loadedPercent = parseFloat((this.bytesLoaded/this.bytesTotal)*100);
 			//window.alert(loadedPercent);
@@ -173,7 +219,7 @@ function createSound(id, path) {
 			$('#playedTime').html(soundTime(this.position));
 			playedPercent = parseFloat((this.position/this.durationEstimate)*100);
 			$('#progressBar').css('width', ''+playedPercent+'%');
-		}
+		},
 	});
 	return mySound;
 }

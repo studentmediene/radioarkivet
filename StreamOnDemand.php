@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="script/jquery.address-1.3.js"></script>
 	
 	<script type="text/javascript" charset="UTF-8">
-		
+	
 		initSM2();
 		//parameter namses in url request
 		var parNames;
@@ -240,7 +240,7 @@
 	* Google Analytics*
 	*******************/
 	var _gaq = _gaq || [];
-  	_gaq.push(['_setAccount', 'UA-5361862-3']);
+  	_gaq.push(['_setAccount', 'GOOGLE_ANALYTICS_ACCOUNT_NUMBER']);
   	_gaq.push(['_trackPageview']);
 
   	(function() {
@@ -248,7 +248,6 @@
     	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   	})();
-
 </script>
 </head>
 <body>
@@ -293,7 +292,7 @@
 	  * Moves the playhead of the sound									    *
 	  * Alters the progressbar length according to the position of the sound*
 	  ***********************************************************************/
-	  
+
 	$('#progressBarContainer').click(function(e) {
 		clickedX = ((e.pageX - this.offsetLeft)/$(this).width());
 		sound = getMySound();
