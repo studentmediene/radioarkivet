@@ -1,0 +1,54 @@
+/*@AUTHOR: Christian Wallervand*/
+@CHARSET "UTF-8";
+body {font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Bitstream Vera Sans', Arial, sans-serif; cursor: default; margin: 0px;} 
+div {position: absolute; width: 820px;}
+table {border: 0px; border-collapse: collapse;}
+tr {height: 70px;}
+td {margin: 0px; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; vertical-align: top;}
+p {margin: 0px;}
+
+.broadcastsTableTd1 {width: 50px;}
+.broadcastsTableTd2 {width: 770px; padding-right: 10px;}
+.broadcastNameP {font-family: Georgia; font-size: large;}
+.broadcastInfoP {font-family: inherit; font-size: small;}
+.content {left: 0px;}
+.grayBox {background-color: #DDDDDD; top: 110px; height: 180px; padding: 10px; position: fixed; z-index: 1000;}
+.header {width: inherit; left: 0px; position: fixed; z-index: 1000; background-color: black;}
+.progressBar {-moz-border-radius: 15px; border-radius: 15px; height: 10px;}
+.playImgTd {}
+.showNameP {font-family: Georgia; font-size: large;}
+.showInfoShort {font-family: inherit; font-size: small;}
+.showsTableTd1 img {width: 50px; height: 50px;}
+.showsTableTd2 {width: 730px; padding-right: 10px;}
+.showHeadline {font-size: x-large; font-family: Georgia; width: 300px;}
+.showInfoLong {font-family: inherit; font-size: small; width: 600px;}
+.time {color:#DDDDDD; width: 50px; position: absolute; bottom: 15px; padding-bottom: 0px; margin-bottom: 0px; font-family: inherit; font-size: small;}
+.volumeButton {position: absolute; width: 15px; height: 15px; bottom: 0px;}
+
+#betaDiv {background-color: #FFF6BF; width: 710px; height:13px; position: absolute; top: 7px; left:7px; font-size: x-small; padding: 3px; border: 1.5px; border-color: #FFD324; border-style: solid;}
+#broadcastsTable {background-color: red; position: absolute; top: 220px; width: inherit;}
+	#broadcastsTable tr {cursor: pointer;}
+#contentDiv {top: 100px;}
+#filterDiv {height: 20px; top: 80px;}
+#grayBoxContainer {position: fixed; top: 100px; height: 200px; background-color: white; width: 800px;} 
+#headerDiv {height: 80px; top: 0px;}
+#loadBar {width: 0%; background-color: #505050;}
+#main {min-height: 800px; margin-left: 0px;}
+#mainLinkP {cursor: pointer; color: #DDDDDD; font-family: Georgia; position: absolute; left: 10px; top: -5px;}
+#nowPlayingP {color: #DDDDDD; left: 110px; font-family: inherit; font-size: small; position: inherit; top: 35px;}
+#playerDiv {height: 45px; top: 15px; z-index: 2000;}
+#playerPlayPause {position: absolute; bottom: 18px; left: 10px;}
+#playedTime {left: 50px; }
+#progressBarContainer {bottom: 18px; left: 110px; width: 500px; background-color: #303030 ;}
+#progressBar {width: 0%; background-color: #DDDDDD; z-index: 900;}
+#podcastDiv {width: 180px; left: 610px;}
+#rrLogo {position: absolute; right: 30px; bottom: 10px; top: 10px;}
+#searchDiv {height: 40px; top: 0px;}
+#showsTable {width: inherit;}
+	#showsTable tr {cursor: pointer;}
+#showInfoDiv {width: 780px; left: 10px;}
+#showImgLarge {width: 150px; height: 150px;}
+#showInfoContentDiv {width: 200px; top: 10px; left: 170px;}	
+#totalTime {left: 620px;}
+#volumeDown {left: 565px;}
+#volumeUp {left: 595px;}
