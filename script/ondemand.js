@@ -2,8 +2,8 @@
  * @AUTHOR Christian Wallervand														*
  * This script contains custom JavaScript methods for the StreamOnDemand application*
  ************************************************************************************/
-var SWF_PATH            = 'FLASH_FILES_URL'; // Example: ondemand.radiorevolt.no/swf/
-var SOUND_PATH          = 'SOUND_FILES_URL'; // Example: pappagorg.radiorevolt.no/ondemand/
+var SWF_PATH            = 'ondemand.radiorevolt.no/swf'; // Example: ondemand.radiorevolt.no/swf/
+var SOUND_PATH          = 'filer.radiorevolt.no/ondemand/'; // Example: pappagorg.radiorevolt.no/ondemand/
 var PLAY_IMG			= 'img/play.png';
 var PAUSE_IMG			= 'img/pause.png';
 var TR_COLOUR_1 		= '#FFFFFF';
